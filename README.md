@@ -1,2 +1,1 @@
-# StudentSAVER
-MY PERSONAL FINTECH WEBSITE PROJECT
+﻿# StudentSAVER Website
