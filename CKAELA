@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <title>StudentSAVER</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to StudentSAVER</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>About StudentSAVER</h2>
+                <p>StudentSAVER is dedicated to providing top notch services for Public institutions students by using open banking APIs for students to directly access to their bursary accounts.</p>
+            </section>
+            <section>
+                <h2>Our Services</h2>
+                <ul>
+                    <li>QR PAYMENTS</li>
+                    <li>DIGTAL GROUP STOKVEL</li>
+                    <li>Student Bursary Access</li>
+                    <li>EMERGENCY MICRO LOANS</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Why Choose Us?</h2>
+                <p>We offer secure, efficient, and user-friendly solutions tailored to meet the needs of students in public institutions. Our platform ensures easy access to bursary funds and promotes financial literacy among students.</p>
+                <article
+                    <h3>Secure Transactions</h3>
+                    <p>We prioritize the security of your financial information with advanced encryption and authentication methods.</p>
+                </article>
+                  <h3>User-Friendly Interface</h3>
+                    <p>Our platform is designed with students in mind, ensuring a seamless and intuitive user experience.</p>      
+            </section>
+                <area>
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions, feel free to reach out to us at 0783171060
+                        <a href="mailto:info@studentSaver.co.za">info@studentSaver.co.za</a></p>
+            
+        </main>
+        <footer>
+            <p>&copy; 2024 CKAELA. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

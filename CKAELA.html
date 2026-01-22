@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StudentSAVER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">💰 StudentSAVER</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#login-modal" class="btn btn-small">Login</a>
+                <a href="#signup-modal" class="btn btn-small btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <a href="#" class="back-btn">← Back</a>
+        <h1 class="hero-title">Welcome to StudentSAVER</h1>
+        <p class="hero-subtitle">Secure Financial Solutions for Students</p>
+        <div class="cta-buttons">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-secondary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">📱</div>
+                <h3>QR Payments</h3>
+                <p>Fast and secure payment solutions using QR codes.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">👥</div>
+                <h3>Digital Stokvel</h3>
+                <p>Collaborative savings groups digitized for management.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">💳</div>
+                <h3>Bursary Access</h3>
+                <p>Direct access to your bursary funds securely.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🆘</div>
+                <h3>Emergency Loans</h3>
+                <p>Quick access to emergency funds when needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <h2>About StudentSAVER</h2>
+        <p>StudentSAVER provides financial solutions for public institution students using open banking APIs. Our platform enables direct access to bursary accounts and promotes financial literacy.</p>
+        
+        <h3>Why Choose Us?</h3>
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="number">01</span>
+                <h4>Secure</h4>
+                <p>Advanced encryption protects your data.</p>
+            </div>
+            <div class="feature-box">
+                <span class="number">02</span>
+                <h4>User-Friendly</h4>
+                <p>Intuitive interface designed for students.</p>
+            </div>
+            <div class="feature-box">
+                <span class="number">03</span>
+                <h4>24/7 Support</h4>
+                <p>Round-the-clock customer support.</p>
+            </div>
+            <div class="feature-box">
+                <span class="number">04</span>
+                <h4>Fast</h4>
+                <p>Quick approvals and instant transfers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="content-section dashboard">
+        <h2>Dashboard Preview</h2>
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h4>Account Balance</h4>
+                <p class="amount">R 5,240.50</p>
+                <button class="btn btn-small btn-primary">View Details</button>
+            </div>
+            <div class="dashboard-card">
+                <h4>Recent Transactions</h4>
+                <ul class="transaction-list">
+                    <li>Bursary Deposit <span class="positive">+R 2,500</span></li>
+                    <li>QR Payment <span class="negative">-R 150</span></li>
+                    <li>Stokvel <span class="negative">-R 200</span></li>
+                </ul>
+            </div>
+            <div class="dashboard-card">
+                <h4>Loans Available</h4>
+                <p class="amount">Up to R 10,000</p>
+                <button class="btn btn-small btn-primary">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 0783171060</p>
+                <p><strong>Email:</strong> info@studentSaver.co.za</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 StudentSAVER. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Login</h2>
+            <form class="modal-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+                <p class="form-text">Don't have an account? <a href="#signup-modal">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <h2>Create Account</h2>
+            <form class="modal-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Student ID" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+                <p class="form-text">Already have an account? <a href="#login-modal">Login</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

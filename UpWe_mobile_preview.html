@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UpWe — Mobile Preview (Android)</title>
+  <style>
+    :root{--phone-w:360px;--phone-h:780px;--frame-bg:#111;--accent:#00bfff}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;display:flex;align-items:center;justify-content:center;height:100vh;background:#f3f4f6;margin:0}
+    .phone-wrap{width:calc(var(--phone-w) + 48px);display:flex;flex-direction:column;align-items:center;gap:12px}
+    .frame{width:var(--phone-w);height:var(--phone-h);border-radius:34px;background:linear-gradient(180deg,#000 0%,#111 100%);box-shadow:0 20px 40px rgba(2,6,23,0.4);position:relative;overflow:hidden;border:8px solid #222}
+    .notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:160px;height:28px;background:#0b0b0b;border-radius:14px;box-shadow:inset 0 -2px 6px rgba(255,255,255,0.02)}
+    .camera{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:6px;height:6px;background:#111;border-radius:50%}
+    iframe{width:100%;height:100%;border:0;background:white}
+    .controls{display:flex;gap:8px;align-items:center;justify-content:center}
+    .btn{background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:14px}
+    .btn.active{background:var(--accent);color:#fff;border-color:transparent}
+    .hint{font-size:13px;color:#374151;text-align:center}
+    .small{font-size:12px;color:#6b7280}
+    .container{display:flex;flex-direction:column;gap:8px;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="phone-wrap">
+    <div class="controls container">
+      <div>
+        <button class="btn active" id="pixel5">Pixel 5 (360×780)</button>
+        <button class="btn" id="pixel6">Pixel 6 (412×915)</button>
+        <button class="btn" id="galaxy">Galaxy S9 (360×740)</button>
+        <button class="btn" id="wide">Wide (412×915)</button>
+      </div>
+      <div class="hint">Preview loads `UpWe APP.html` from the same folder. Use browser devtools for additional emulation.</div>
+    </div>
+
+    <div class="frame" id="frame">
+      <div class="notch" aria-hidden="true"></div>
+      <iframe id="preview" src="UpWe APP.html" title="UpWe mobile preview"></iframe>
+    </div>
+
+    <div class="small">Open this file in Chrome, then press <strong>Ctrl+Shift+I</strong> and <strong>Ctrl+Shift+M</strong> to open Device Toolbar for more Android devices.</div>
+  </div>
+
+  <script>
+    const sizes = {
+      pixel5: {w:360, h:780},
+      pixel6: {w:412, h:915},
+      galaxy: {w:360, h:740},
+      wide: {w:412, h:915}
+    }
+    function setSize(mode){
+      const f = document.getElementById('frame');
+      f.style.width = sizes[mode].w + 'px';
+      f.style.height = sizes[mode].h + 'px';
+      const btns = document.querySelectorAll('.btn'); btns.forEach(b=>b.classList.remove('active'));
+      document.getElementById(mode).classList.add('active');
+    }
+    document.getElementById('pixel5').onclick = ()=>setSize('pixel5');
+    document.getElementById('pixel6').onclick = ()=>setSize('pixel6');
+    document.getElementById('galaxy').onclick = ()=>setSize('galaxy');
+    document.getElementById('wide').onclick = ()=>setSize('wide');
+  </script>
+</body>
+</html>
